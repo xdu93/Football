@@ -8,7 +8,7 @@ public class Strikers extends FootballTeam {
 
     @Override
     public void print() {
-        System.out.println("We are strikers of " + super.getName() + " from " + getOriginCity());
+        System.out.println("We are strikers of " + super.getName() + " from " + super.getOriginCity());
 
         System.out.println("Our names:");
         for (int i = 0; i < this.strikersNames.length; i++) {

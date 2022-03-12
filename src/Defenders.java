@@ -8,7 +8,7 @@ public class Defenders extends FootballTeam {
 
     @Override
     public void print() {
-        System.out.println("We are defenders of " + super.getName() + " from " + getOriginCity());
+        System.out.println("We are defenders of " + super.getName() + " from " + super.getOriginCity());
 
         System.out.println("Our names:");
         for (int i = 0; i < this.defendersNames.length; i++) {
