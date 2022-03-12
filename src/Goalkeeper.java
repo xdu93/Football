@@ -1,9 +1,9 @@
 public class Goalkeeper extends FootballTeam {
     private String name;
 
-    public Goalkeeper(String teamName, String originCity, String name) {
+    public Goalkeeper(String teamName, String originCity, String namesOfPlayers) {
         super(teamName, originCity);
-        this.name = name;
+        this.name = namesOfPlayers;
     }
 
     @Override

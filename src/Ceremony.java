@@ -1,20 +1,18 @@
 public class Ceremony {
     public static void main(String[] args) {
 
-        //Списки игроков года, максимум 11 игроков
-        String[] defendersOfTheYear = {"Bellerin", "Vermaelen", "Tearny", "White"};
-        String[] midfieldersOfTheYear = {"Xavi", "Iniesta", "Busquets"};
-        String[] strikersOfTheYear = {"Ronaldo", "Benzema", "Baile"};
-        String goalkeeperOfTheYear = "Buffon";
-
         //Старт церемонии
         System.out.println("The ceremony of Team of the year start right now!!!");
+        System.out.println("__________");
 
         //Инициализация
-        FootballTeam goalkeeper = new Goalkeeper("Juventus", "Tourine", goalkeeperOfTheYear);
-        FootballTeam defenders = new Defenders("Arsenal", "London", defendersOfTheYear);
-        FootballTeam midefielders = new Midefielders("Barcelona", "Barcelona", midfieldersOfTheYear);
-        FootballTeam strikers = new Strikers("Real Madrid", "Madrid", strikersOfTheYear);
+        FootballTeam goalkeeper = new Goalkeeper("Juventus", "Tourine", "Buffon");
+        FootballTeam defenders = new Defenders("Arsenal", "London",
+                                                    new String[] {"Bellerin", "Vermaelen", "Tearny", "White"});
+        FootballTeam midefielders = new Midefielders("Barcelona", "Barcelona",
+                                                    new String[] {"Xavi", "Iniesta", "Busquets"});
+        FootballTeam strikers = new Strikers("Real Madrid", "Madrid",
+                                                    new String[] {"Ronaldo", "Benzema", "Baile"});
 
         //Вывод  информации по каждому классу игроков
         goalkeeper.print();
@@ -22,10 +20,10 @@ public class Ceremony {
         midefielders.print();
         strikers.print();
 
-        //Вывод команды года
-        FootballTeam teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getPlayersNames(),
-                midefielders.getPlayersNames(), strikers.getPlayersNames());
+        //Команда года
+        FootballTeam teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getNamesOfPlayers(),
+                midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
+        System.out.println("This is team of the 2022 year!!!");
         teamOfTheYear.print();
-
     }
 }
