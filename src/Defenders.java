@@ -1,9 +1,9 @@
 public class Defenders extends FootballTeam {
-    public String[] defendersNames;
+    private String[] names;
 
-    public Defenders(String teamName, String originCity, String[] defendersNames) {
+    public Defenders(String teamName, String originCity, String[] names) {
         super(teamName, originCity);
-        this.defendersNames = defendersNames;
+        this.names = names;
     }
 
     @Override
@@ -11,14 +11,14 @@ public class Defenders extends FootballTeam {
         System.out.println("We are defenders of " + super.getName() + " from " + super.getOriginCity());
 
         System.out.println("Our names:");
-        for (int i = 0; i < this.defendersNames.length; i++) {
-            System.out.println(defendersNames[i]);
+        for (int i = 0; i < this.names.length; i++) {
+            System.out.println(names[i]);
         }
         System.out.println("__________");
     }
 
     @Override
     public String[] getPlayersNames(){
-        return defendersNames;
+        return names;
     }
 }
