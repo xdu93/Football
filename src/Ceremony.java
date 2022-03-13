@@ -14,15 +14,14 @@ public class Ceremony {
         FootballTeam strikers = new Strikers("Real Madrid", "Madrid",
                                                     new String[] {"Ronaldo", "Benzema", "Baile"});
 
-        //Вывод  информации по каждому классу игроков
-        goalkeeper.print();
-        defenders.print();
-        midefielders.print();
-        strikers.print();
+        //Вывод информации по каждому типу игроков
+        for (FootballTeam t:new FootballTeam[] {goalkeeper, defenders, midefielders, strikers}) {
+            t.print();
+        }
 
         //Команда года
         FootballTeam teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getNamesOfPlayers(),
-                midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
+                                        midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
         System.out.println("This is team of the 2022 year!!!");
         teamOfTheYear.print();
     }
