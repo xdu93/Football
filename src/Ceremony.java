@@ -3,7 +3,7 @@ public class Ceremony {
 
         //Старт церемонии
         System.out.println("The ceremony of Team of the year start right now!!!");
-        System.out.println("__________");
+        System.out.println("!!!!!!!");
 
         //Инициализация
         FootballTeam goalkeeper = new Goalkeeper("Juventus", "Tourine", "Buffon");
@@ -13,11 +13,14 @@ public class Ceremony {
                                                     new String[] {"Xavi", "Iniesta", "Busquets"});
         FootballTeam strikers = new Strikers("Real Madrid", "Madrid",
                                                     new String[] {"Ronaldo", "Benzema", "Baile"});
-        Coach headCoach = new Coach("Wenger", "Head coach");
+        Coachs headCoach = new Coachs("Wenger", "Head coach");
 
         //Вывод информации по каждому типу игроков
         for (Object t:new Object[] {goalkeeper, defenders, midefielders, strikers, headCoach}) {
             System.out.println(t);
+            if (t instanceof Skillable){
+                ((Skillable)t).skill();
+            }
         }
 
         //Команда года
