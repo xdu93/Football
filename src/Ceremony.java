@@ -8,24 +8,25 @@ public class Ceremony {
         //Инициализация
         FootballTeam goalkeeper = new Goalkeeper("Juventus", "Tourine", "Buffon");
         FootballTeam defenders = new Defenders("Arsenal", "London",
-                                                    new String[] {"Bellerin", "Vermaelen", "Tearny", "White"});
+                new String[]{"Bellerin", "Vermaelen", "Tearny", "White"});
         FootballTeam midefielders = new Midefielders("Barcelona", "Barcelona",
-                                                    new String[] {"Xavi", "Iniesta", "Busquets"});
+                new String[]{"Xavi", "Iniesta", "Busquets"});
         FootballTeam strikers = new Strikers("Real Madrid", "Madrid",
-                                                    new String[] {"Ronaldo", "Benzema", "Baile"});
-        Coachs headCoach = new Coachs("Wenger", "Head coach");
+                new String[]{"Ronaldo", "Benzema", "Baile"});
+        Coachs headCoach = new HeadCoach("Wenger");
+        Coachs physicalCoach = new PhysicalCoach("Markos");
 
-        //Вывод информации по каждому типу игроков
-        for (Object t:new Object[] {goalkeeper, defenders, midefielders, strikers, headCoach}) {
+        //Вывод информации по каждому типу игроков и тренеров
+        for (Object t : new Object[]{goalkeeper, defenders, midefielders, strikers, headCoach, physicalCoach}) {
             System.out.println(t);
-            if (t instanceof Skillable){
-                ((Skillable)t).skill();
+            if (t instanceof Skillable) {
+                ((Skillable) t).skill();
             }
         }
 
         //Команда года
         Object teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getNamesOfPlayers(),
-                                        midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
+                midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
         System.out.println("This is team of the 2022 year!!!");
         System.out.println(teamOfTheYear);
     }
