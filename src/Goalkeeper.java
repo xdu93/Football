@@ -7,14 +7,17 @@ public class Goalkeeper extends FootballTeam {
     }
 
     @Override
-    public void print() {
-        System.out.println("I am goalkeeper of " + super.getName() + " from " + super.getOriginCity());
-        System.out.println("My name is " + name);
-        System.out.println("__________");
-    }
+    public void print() { System.out.println(this);}
 
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "I am goalkeeper of " + super.getName() + " from " + super.getOriginCity() + '\n' +
+                "My name is " + name + '\n' +
+                "__________" + '\n';
     }
 }

@@ -37,11 +37,10 @@ public class FootballTeam {
         return teamName;
     }
 
-    public String[] getNamesOfPlayers() {
-        return namesOfPlayers;
-    }
+    public String[] getNamesOfPlayers() { return namesOfPlayers;}
 
-    public void print() {
-        System.out.println(Arrays.toString(this.getNamesOfPlayers()));
-    }
+   public void print() { System.out.println(this); }
+
+    @Override
+    public String toString() { return Arrays.toString(namesOfPlayers) ; }
 }

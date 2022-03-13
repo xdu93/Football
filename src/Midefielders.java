@@ -7,18 +7,19 @@ public class Midefielders extends FootballTeam {
     }
 
     @Override
-    public void print() {
-        System.out.println("We are midfielders of " + super.getName() + " from " + super.getOriginCity());
-
-        System.out.println("Our names:");
-        for (int i = 0; i < this.namesOfPlayers.length; i++) {
-            System.out.println(namesOfPlayers[i]);
-        }
-        System.out.println("__________");
-    }
+    public void print() { System.out.println(this); }
 
     @Override
     public String[] getNamesOfPlayers() {
         return namesOfPlayers;
+    }
+
+    @Override
+    public String toString() {
+        String str = "We are midefielders of " + super.getName() + " from " + super.getOriginCity() + '\n'
+                + "Our names: " + '\n';
+        for (int i = 0; i < this.namesOfPlayers.length; i++) { str += namesOfPlayers[i] + '\n'; }
+        str += "__________" + '\n';
+        return str;
     }
 }

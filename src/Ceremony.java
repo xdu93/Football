@@ -13,16 +13,17 @@ public class Ceremony {
                                                     new String[] {"Xavi", "Iniesta", "Busquets"});
         FootballTeam strikers = new Strikers("Real Madrid", "Madrid",
                                                     new String[] {"Ronaldo", "Benzema", "Baile"});
+        Coach headCoach = new Coach("Wenger", "Head coach");
 
         //Вывод информации по каждому типу игроков
-        for (FootballTeam t:new FootballTeam[] {goalkeeper, defenders, midefielders, strikers}) {
-            t.print();
+        for (Object t:new Object[] {goalkeeper, defenders, midefielders, strikers, headCoach}) {
+            System.out.println(t);
         }
 
         //Команда года
-        FootballTeam teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getNamesOfPlayers(),
+        Object teamOfTheYear = new FootballTeam(goalkeeper.getName(), defenders.getNamesOfPlayers(),
                                         midefielders.getNamesOfPlayers(), strikers.getNamesOfPlayers());
         System.out.println("This is team of the 2022 year!!!");
-        teamOfTheYear.print();
+        System.out.println(teamOfTheYear);
     }
 }
